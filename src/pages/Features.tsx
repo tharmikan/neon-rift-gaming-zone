@@ -1,7 +1,6 @@
-
 import React from 'react';
 import Navbar from '@/components/Layout/Navbar';
-import { Cpu, Wifi, Zap, Thermometer, Fan, Command, Monitor, Lightning, MemoryStick, GameController } from 'lucide-react';
+import { Cpu, Wifi, Zap, Thermometer, Fan, Command, Monitor, MemoryStick, Gamepad } from 'lucide-react';
 
 const Features = () => {
   const performanceFeatures = [
@@ -21,7 +20,7 @@ const Features = () => {
       description: "DDR5 memory with up to 64GB capacity ensures smooth multitasking and faster game loading."
     },
     {
-      icon: <Lightning size={28} />,
+      icon: <Zap size={28} />,
       title: "Ultra-Fast Storage",
       description: "NVMe SSDs with up to 4TB capacity for lightning-fast game loading and file transfers."
     }
@@ -39,7 +38,7 @@ const Features = () => {
       description: "High refresh rate displays with NVIDIA G-SYNC support for tear-free, smooth visuals."
     },
     {
-      icon: <GameController size={28} />,
+      icon: <Gamepad size={28} />,
       title: "Immersive Experience",
       description: "Dolby Atmos spatial audio and RGB lighting create an immersive gaming environment."
     },
