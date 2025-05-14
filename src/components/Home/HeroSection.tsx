@@ -1,5 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -97,9 +99,9 @@ const HeroSection = () => {
             </div>
             
             <h1 className="font-orbitron text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              <span className="text-gradient">DOMINATE</span> THE 
+              <span className="text-gradient">UNLEASH</span> NEXT-LEVEL 
               <br />
-              DIGITAL BATTLEGROUND
+              <span className="text-white">POWER</span> – DELL GAMING
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto lg:mx-0">
@@ -108,25 +110,25 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <button className="btn-neon">
-                Explore Alienware
-              </button>
-              <button className="py-2.5 px-5 border border-gray-600 text-white rounded-md hover:bg-white/5 transition-all duration-300">
-                View G-Series
-              </button>
+              <Button className="btn-neon flex items-center gap-2">
+                Shop Now <ChevronRight className="h-4 w-4" />
+              </Button>
+              <Button variant="outline" className="border border-gray-600 text-white hover:bg-white/5">
+                Explore Models
+              </Button>
             </div>
             
             <div className="mt-10 grid grid-cols-3 gap-4">
               <div className="text-center">
-                <h3 className="font-orbitron text-neon-blue text-xl md:text-2xl font-bold">120Hz+</h3>
+                <h3 className="font-orbitron text-neon-blue text-xl md:text-2xl font-bold">165Hz+</h3>
                 <p className="text-sm text-gray-400">Display Refresh</p>
               </div>
               <div className="text-center">
-                <h3 className="font-orbitron text-neon-blue text-xl md:text-2xl font-bold">RTX</h3>
-                <p className="text-sm text-gray-400">Graphics</p>
+                <h3 className="font-orbitron text-neon-blue text-xl md:text-2xl font-bold">RTX 40</h3>
+                <p className="text-sm text-gray-400">Series Graphics</p>
               </div>
               <div className="text-center">
-                <h3 className="font-orbitron text-neon-blue text-xl md:text-2xl font-bold">12th Gen</h3>
+                <h3 className="font-orbitron text-neon-blue text-xl md:text-2xl font-bold">13th Gen</h3>
                 <p className="text-sm text-gray-400">Intel Core</p>
               </div>
             </div>
@@ -134,9 +136,9 @@ const HeroSection = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-              alt="Dell Gaming Laptop" 
-              className="w-full h-auto object-cover rounded-lg neon-border animate-float z-10 relative shadow-2xl shadow-neon-blue/20"
+              src="https://assets.dell.com/images/global/products/alienware-m18-r1-non-touch-non-tobii/alienware-m18-r1-non-touch-non-tobii-lnb-00000ff090-hero-504x350-ng.jpg" 
+              alt="Dell Alienware Gaming Laptop" 
+              className="w-full h-auto object-contain rounded-lg neon-border animate-float z-10 relative shadow-2xl shadow-neon-blue/20"
             />
             <div className="absolute -inset-4 bg-neon-blue/15 rounded-lg blur-xl -z-10"></div>
             <div className="absolute -inset-2 bg-neon-blue/10 rounded-lg -z-10 animate-pulse-neon"></div>
