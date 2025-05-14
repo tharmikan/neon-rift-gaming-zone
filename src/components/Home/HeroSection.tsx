@@ -134,14 +134,22 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="relative">
-            <img 
-              src="https://assets.dell.com/images/global/products/alienware-m18-r1-non-touch-non-tobii/alienware-m18-r1-non-touch-non-tobii-lnb-00000ff090-hero-504x350-ng.jpg" 
-              alt="Dell Alienware Gaming Laptop" 
-              className="w-full h-auto object-contain rounded-lg neon-border animate-float z-10 relative shadow-2xl shadow-neon-blue/20"
-            />
-            <div className="absolute -inset-4 bg-neon-blue/15 rounded-lg blur-xl -z-10"></div>
-            <div className="absolute -inset-2 bg-neon-blue/10 rounded-lg -z-10 animate-pulse-neon"></div>
+          <div className="relative mx-auto lg:ml-auto lg:mr-0 max-w-md lg:max-w-none">
+            <div className="relative p-2 bg-gaming-darker/60 rounded-lg border border-neon-blue/30">
+              <img 
+                src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/alienware-notebooks/alienware-m18-amd/media-gallery/usb-a/black/non-touch/notebook-alienware-m18-amd-usb-a-black-non-touch-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3635&hei=2548&qlt=100,1&resMode=sharp2&size=3635,2548"
+                alt="Dell Alienware Gaming Laptop" 
+                className="w-full h-auto object-contain rounded z-10 relative shadow-2xl shadow-neon-blue/20"
+              />
+              <div className="absolute inset-0 rounded-lg border-2 border-neon-blue/30 animate-pulse-neon"></div>
+            </div>
+            <div className="absolute -inset-3 bg-neon-blue/15 rounded-lg blur-xl -z-10"></div>
+            <div className="absolute -inset-6 bg-neon-blue/5 rounded-lg blur-2xl -z-20"></div>
+            
+            {/* RGB light effect */}
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-red-500/20 rounded-full blur-xl mix-blend-screen"></div>
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl mix-blend-screen"></div>
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-32 bg-purple-500/20 rounded-full blur-xl mix-blend-screen"></div>
           </div>
         </div>
       </div>
