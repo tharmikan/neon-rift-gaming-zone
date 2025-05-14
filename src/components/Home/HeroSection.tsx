@@ -134,11 +134,12 @@ const HeroSection = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1547547908-dc7974d2eda6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Dell Gaming Laptop" 
-              className="w-full h-auto object-cover rounded-lg neon-border animate-float z-10 relative"
+              className="w-full h-auto object-cover rounded-lg neon-border animate-float z-10 relative shadow-2xl shadow-neon-blue/20"
             />
-            <div className="absolute -inset-4 bg-neon-blue/5 rounded-lg blur-xl -z-10"></div>
+            <div className="absolute -inset-4 bg-neon-blue/15 rounded-lg blur-xl -z-10"></div>
+            <div className="absolute -inset-2 bg-neon-blue/10 rounded-lg -z-10 animate-pulse-neon"></div>
           </div>
         </div>
       </div>
