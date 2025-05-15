@@ -138,10 +138,10 @@ const HeroSection = () => {
             {/* Enhanced image container with stronger glow effect */}
             <div className="relative p-4 bg-gaming-darker/80 rounded-lg border-2 border-neon-blue shadow-[0_0_20px_rgba(0,240,255,0.6)]">
               <img 
-                src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/alienware-notebooks/alienware-m18-amd/media-gallery/usb-a/black/non-touch/notebook-alienware-m18-amd-usb-a-black-non-touch-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3635&hei=2548&qlt=100,1&resMode=sharp2&size=3635,2548"
+                src="/lovable-uploads/c4eb3a0d-a37c-4560-b36d-3cfc946d9e03.png"
                 alt="Dell Alienware Gaming Laptop" 
                 className="w-full h-auto object-contain rounded z-10 relative shadow-inner shadow-neon-blue/40"
-                aria-label="Dell Alienware M18 Gaming Laptop"
+                aria-label="Dell Alienware Gaming Laptop"
               />
               {/* Animated border glow */}
               <div className="absolute inset-0 rounded-lg border-2 border-neon-blue animate-pulse-neon"></div>
