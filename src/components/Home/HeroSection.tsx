@@ -138,10 +138,10 @@ const HeroSection = () => {
             {/* Enhanced image container with stronger glow effect */}
             <div className="relative p-4 bg-gaming-darker/80 rounded-lg border-2 border-neon-blue shadow-[0_0_20px_rgba(0,240,255,0.6)]">
               <img 
-                src="/lovable-uploads/c4eb3a0d-a37c-4560-b36d-3cfc946d9e03.png"
-                alt="Dell Alienware Gaming Laptop" 
+                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
+                alt="Gaming Laptop" 
                 className="w-full h-auto object-contain rounded z-10 relative shadow-inner shadow-neon-blue/40"
-                aria-label="Dell Alienware Gaming Laptop"
+                aria-label="High-performance Gaming Laptop"
               />
               {/* Animated border glow */}
               <div className="absolute inset-0 rounded-lg border-2 border-neon-blue animate-pulse-neon"></div>
