@@ -135,17 +135,22 @@ const HeroSection = () => {
           </div>
           
           <div className="relative mx-auto lg:ml-auto lg:mr-0 max-w-md lg:max-w-none">
-            <div className="relative p-2 bg-gaming-darker/60 rounded-lg border border-neon-blue/30">
+            {/* Enhanced image container with stronger glow effect */}
+            <div className="relative p-4 bg-gaming-darker/80 rounded-lg border-2 border-neon-blue shadow-[0_0_20px_rgba(0,240,255,0.6)]">
               <img 
                 src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/alienware-notebooks/alienware-m18-amd/media-gallery/usb-a/black/non-touch/notebook-alienware-m18-amd-usb-a-black-non-touch-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=3635&hei=2548&qlt=100,1&resMode=sharp2&size=3635,2548"
                 alt="Dell Alienware Gaming Laptop" 
-                className="w-full h-auto object-contain rounded z-10 relative shadow-2xl shadow-neon-blue/20"
+                className="w-full h-auto object-contain rounded z-10 relative shadow-inner shadow-neon-blue/40"
                 aria-label="Dell Alienware M18 Gaming Laptop"
               />
-              <div className="absolute inset-0 rounded-lg border-2 border-neon-blue/30 animate-pulse-neon"></div>
+              {/* Animated border glow */}
+              <div className="absolute inset-0 rounded-lg border-2 border-neon-blue animate-pulse-neon"></div>
             </div>
-            <div className="absolute -inset-3 bg-neon-blue/15 rounded-lg blur-xl -z-10"></div>
-            <div className="absolute -inset-6 bg-neon-blue/5 rounded-lg blur-2xl -z-20"></div>
+            
+            {/* Enhanced glow effects */}
+            <div className="absolute -inset-2 bg-neon-blue/25 rounded-lg blur-xl -z-10"></div>
+            <div className="absolute -inset-4 bg-neon-blue/15 rounded-lg blur-2xl -z-20"></div>
+            <div className="absolute -inset-6 bg-neon-blue/5 rounded-lg blur-3xl -z-30"></div>
             
             {/* RGB lighting effects */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-red-500/20 rounded-full blur-xl mix-blend-screen"></div>
