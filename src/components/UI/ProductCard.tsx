@@ -1,14 +1,21 @@
 
-import React from 'react';
-import { Gamepad, Cpu, Monitor, MemoryStick, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { Gamepad, Cpu, Monitor, MemoryStick, Clock, CreditCard, CheckCircle } from 'lucide-react';
 import { Product } from '@/data/products';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { useToast } from "@/components/ui/use-toast";
 
 type ProductCardProps = {
   product: Product;
+  showPurchaseOptions?: boolean;
 };
 
-const ProductCard = ({ product }: ProductCardProps) => {
+const ProductCard = ({ product, showPurchaseOptions = false }: ProductCardProps) => {
   const { id, name, series, image, price, specs, category } = product;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [showOptions, setShowOptions] = useState(false);
 
   // Icons for specs
   const specIcons = {
@@ -17,6 +24,31 @@ const ProductCard = ({ product }: ProductCardProps) => {
     display: <Monitor className="text-neon-green" size={16} />,
     memory: <MemoryStick className="text-neon-pink" size={16} />,
     storage: <Clock className="text-neon-blue" size={16} />,
+  };
+
+  const handlePurchase = (paymentMethod: string) => {
+    // Simulate purchase process
+    toast({
+      title: "Processing payment",
+      description: `Processing ${paymentMethod} payment for ${name}`,
+    });
+    
+    // In a real app, this would redirect to a payment gateway
+    setTimeout(() => {
+      toast({
+        title: "Purchase successful",
+        description: `Thank you for purchasing ${name}`,
+        variant: "default",
+      });
+    }, 2000);
+  };
+
+  const handleProductClick = () => {
+    if (showPurchaseOptions) {
+      setShowOptions(!showOptions);
+    } else {
+      navigate('/dell-laptops');
+    }
   };
 
   return (
@@ -32,8 +64,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
           <span className="text-xs font-medium text-white">{series}</span>
         </div>
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-          <button className="btn-neon">
-            View Details
+          <button 
+            className="btn-neon"
+            onClick={handleProductClick}
+          >
+            {showPurchaseOptions ? 'Purchase Options' : 'View Details'}
           </button>
         </div>
       </div>
@@ -58,15 +93,55 @@ const ProductCard = ({ product }: ProductCardProps) => {
           ))}
         </div>
         
+        {showOptions && showPurchaseOptions && (
+          <div className="mt-4 mb-4 space-y-2 border-t border-gaming-accent/50 pt-4">
+            <h4 className="font-medium text-neon-blue mb-2 flex items-center gap-2">
+              <CreditCard size={16} />
+              Payment Options
+            </h4>
+            <Button 
+              className="w-full bg-gaming-accent hover:bg-gaming-accent/80 text-white"
+              onClick={() => handlePurchase('Credit Card')}
+            >
+              Pay with Credit Card
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full border-gaming-accent text-white hover:bg-gaming-accent/20"
+              onClick={() => handlePurchase('PayPal')}
+            >
+              Pay with PayPal
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full text-gray-300 hover:text-neon-blue hover:bg-transparent"
+              onClick={() => setShowOptions(false)}
+            >
+              Cancel
+            </Button>
+          </div>
+        )}
+        
         <div className="flex justify-between items-center">
           <span className="text-xs text-gray-400 border border-gaming-accent/50 rounded-full px-2 py-1">
             {category}
           </span>
-          <button className="flex items-center gap-1 group/btn">
-            <span className="text-neon-blue text-sm font-medium group-hover/btn:underline">
-              Compare
-            </span>
-          </button>
+          {showPurchaseOptions && !showOptions ? (
+            <button 
+              className="flex items-center gap-1 group/btn"
+              onClick={() => setShowOptions(true)}
+            >
+              <span className="text-neon-blue text-sm font-medium group-hover/btn:underline">
+                Buy Now
+              </span>
+            </button>
+          ) : (
+            <button className="flex items-center gap-1 group/btn">
+              <span className="text-neon-blue text-sm font-medium group-hover/btn:underline">
+                Compare
+              </span>
+            </button>
+          )}
         </div>
       </div>
     </div>

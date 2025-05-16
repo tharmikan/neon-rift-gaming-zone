@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -110,11 +111,15 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button className="btn-neon flex items-center gap-2">
-                Shop Now <ChevronRight className="h-4 w-4" />
+              <Button className="btn-neon flex items-center gap-2" asChild>
+                <Link to="/dell-laptops">
+                  Shop Now <ChevronRight className="h-4 w-4" />
+                </Link>
               </Button>
-              <Button variant="outline" className="border border-gray-600 text-white hover:bg-white/5">
-                Explore Models
+              <Button variant="outline" className="border border-gray-600 text-white hover:bg-white/5" asChild>
+                <Link to="/products">
+                  Explore Models
+                </Link>
               </Button>
             </div>
             

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTASection = () => {
   return (
@@ -19,14 +20,14 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-wrap gap-6 justify-center">
-            <button className="btn-neon py-3 px-8 text-lg flex items-center gap-2">
+            <Link to="/dell-laptops" className="btn-neon py-3 px-8 text-lg flex items-center gap-2">
               <span>Shop Alienware</span>
               <ChevronRight size={18} />
-            </button>
-            <button className="py-3 px-8 text-lg border border-gray-600 text-white rounded-md hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
+            </Link>
+            <Link to="/dell-laptops" className="py-3 px-8 text-lg border border-gray-600 text-white rounded-md hover:bg-white/5 transition-all duration-300 flex items-center gap-2">
               <span>Explore G-Series</span>
               <ChevronRight size={18} />
-            </button>
+            </Link>
           </div>
           
           <p className="mt-8 text-sm text-gray-400">

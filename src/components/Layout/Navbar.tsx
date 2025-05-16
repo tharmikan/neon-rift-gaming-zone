@@ -22,6 +22,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Dell Laptops', path: '/dell-laptops' },
     { name: 'Products', path: '/products' },
     { name: 'Features', path: '/features' },
     { name: 'Contact', path: '/contact' },
@@ -65,10 +66,13 @@ const Navbar = () => {
               </NavLink>
             ))}
             
-            <button className="btn-neon group ml-4 flex items-center gap-1">
+            <NavLink 
+              to="/dell-laptops" 
+              className="btn-neon group ml-4 flex items-center gap-1"
+            >
               <span>Shop Now</span>
               <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
-            </button>
+            </NavLink>
           </nav>
           
           {/* Mobile Menu Button */}
@@ -99,9 +103,13 @@ const Navbar = () => {
                 </NavLink>
               ))}
               
-              <button className="btn-neon mt-4">
+              <NavLink 
+                to="/dell-laptops" 
+                className="btn-neon mt-4"
+                onClick={() => setIsOpen(false)}
+              >
                 Shop Now
-              </button>
+              </NavLink>
             </nav>
           </div>
         </div>
